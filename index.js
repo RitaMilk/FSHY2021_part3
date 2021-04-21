@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 app.use(express.json()) //needed for POST
+app.use(express.static('build'))
 //3.7 morgan
 //When morgan is in used then HTTP verbs will be printed ontu npm console
 //Bellow is example what you will see on console, the second row with "GET" word
@@ -11,7 +12,7 @@ const morgan=require('morgan')
 morgan.token('type', function (req, res) { return req.headers['content-type'] })
 morgan.token('body', function (req, res) { return JSON.stringify(req.body) })
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms  :type  :body'))
-
+//
 //part3-2
 const cors = require('cors')
 app.use(cors())
@@ -44,7 +45,7 @@ let persons = [
         },
         { 
           id: '6',
-          name: 'Backend part3',
+          name: 'Backend local part3',
           number: '33-33-3333' 
         }
 ]
