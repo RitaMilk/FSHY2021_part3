@@ -8,6 +8,7 @@ const url = process.env.MONGODB_URI
 //console.log('you are in persona.js')
 
 //console.log('connecting to', url)
+console.log('minun porttini on ', process.env.PORT)
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
   .then(result => {
