@@ -5,9 +5,9 @@ var uniqueValidator = require('mongoose-unique-validator')
 const url = process.env.MONGODB_URI
 //const password='chemodan21'
 //const url =  `mongodb+srv://fsp3:${password}@cluster0.mkyfv.mongodb.net/persona-app?retryWrites=true&w=majority`
-console.log('you are in persona.js')
+//console.log('you are in persona.js')
 
-console.log('connecting to', url)
+//console.log('connecting to', url)
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
   .then(result => {
